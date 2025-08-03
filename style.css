@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fffdfd;
+    background: url("sara-cottle-Y4io3c5at_o-unsplash.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: #1a9609;
+  }
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #eb0606;
+  }
+  
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 2rem 3rem;
+    min-height: 80vh;
+  }
+  
+  .hero-text {
+    flex: 1 1 400px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    transition: transform 0.3s ease;
+  }
+  
+  .cta-buttons:hover {
+    transform: scale(1.02);
+  }
+  
+  .cta-buttons a {
+    padding: 1rem 2.8rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .btn-primary {
+    
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(76, 175, 80, 0.4);
+  }
+  
+  .btn-primary:hover {
+    background: #43a047;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.5);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: #cbe2cc;
+    border: 2px solid #c1ddc2;
+    box-shadow: 0 6px 18px rgba(76, 175, 80, 0.4);
+  }
+  
+  
+  .btn-secondary:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
+  }
+
+  .hero-image img {
+    max-width: 400px;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(255, 223, 0, 0.4);
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .floating-images img {
+    position: absolute;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+    animation: floatRotate 10s ease-in-out infinite;
+    transform-origin: center;
+  }
+  
+  .nautilus {
+    top: 25%;
+    left: 3%;
+    width: 150px;
+    animation-delay: 0s;
+  }
+  
+  .galaxy {
+    top: 30%;
+    left: 50%;
+    width: 120px;
+    animation-delay: 1s;
+  }
+  
+  .Milipede{
+    bottom: 10%;
+    left: 40%;
+    width: 250px; 
+    animation-delay: 2s;
+  }
+  
+  
+  @keyframes float {
+    0%   { transform: translateX(0); }
+    48%  { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+  }
+  
+  @keyframes floatRotate {
+    0%   { transform: translateY(0) rotate(0deg); }
+    50%  { transform: translateY(20px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+  
+  @keyframes fadeInUp {
+    0%   { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-image img {
+      margin-top: 2rem;
+    }
+  
+    .floating-images img {
+      width: 60px;
+      opacity: 0.25;
+    }
+  }
+  
